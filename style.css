@@ -8,6 +8,28 @@
     opacity: 60%;
 }
 
+.sticker{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+}
+
+.sticker-carta{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Teléfonos grandes - 481px hasta 768px */
 @media (min-width: 481px) {
 
@@ -48,7 +70,7 @@
         align-items: center;
         gap: 40px;
         justify-content: center;
-        min-height: 100vh;
+        min-height: 95vh;
     }
 
     .fila1, .fila2, .fila3 {
@@ -80,7 +102,7 @@
         transition: all 0.3s ease;
     }
 
-    h1{
+    .contenedor h1{
         font-family: "press start 2p", "cursive";
         text-align: center;
         margin-top: 5%;
@@ -100,5 +122,47 @@
     .carta:hover p {
         background: none;
         
+    }
+
+    .modal{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff9f5;
+        border: #e8c9b8 3px solid;
+        height: 900px;
+        width: 800px;
+        border-radius: 10px;
+        color: #4a3728;
+    }
+    .modal p{
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: left;
+        color: black;
+        padding-top: 10px;
+        line-height: 25px;
+        width: 88%;
+        margin: auto;
+        text-align: justify;
+    }
+
+    .modal h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-top: 7%;
+        margin-bottom: 5%;
+        color: #c1826a;;
+        font-size: 30px;
+    }
+    
+    .modal hr{
+        border: none;
+        border-top: 2px dashed #e8c9b8;
+        width: 88%;
+        margin: auto;
+    }
+
+    [data-id="carta-triste"]{
+        display: none
     }
 }
